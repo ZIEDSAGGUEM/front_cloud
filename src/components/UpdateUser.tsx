@@ -25,7 +25,7 @@ const UpdateUser: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.VITE_REACT_APP_API_KEY}/user/${id}`)
+      .get(`${import.meta.env.VITE_API_URL}/user/${id}`)
       .then((response) => {
         setUser(response.data);
       })
