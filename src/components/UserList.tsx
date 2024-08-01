@@ -18,7 +18,7 @@ const UserList: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get(`${process.env.VITE_REACT_APP_API_KEY}/`)
+      .get(`${import.meta.env.VITE_API_URL}/`)
       .then((response) => {
         setUsers(response.data.results);
         console.log(users);
