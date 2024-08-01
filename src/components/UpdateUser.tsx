@@ -37,7 +37,7 @@ const UpdateUser: React.FC = () => {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     axios
-      .put(`http://localhost:8787/update/${id}`, user)
+      .put(`${import.meta.env.VITE_API_URL}/update/${id}`, user)
       .then(() => {
         navigate("/");
       })
