@@ -14,7 +14,7 @@ const AddUser: React.FC = () => {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     axios
-      .post(`${process.env.VITE_REACT_APP_API_KEY}/add`, {
+      .post(`${import.meta.env.VITE_API_URL}/add`, {
         name,
         email,
         address,
