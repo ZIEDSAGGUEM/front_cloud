@@ -33,7 +33,7 @@ const UserList: React.FC = () => {
   const deleteUser = (id: number) => {
     if (window.confirm("Are you sure you want to delete this user?")) {
       axios
-        .delete(`http://localhost:8787/delete/${id}`)
+        .delete(`${import.meta.env.VITE_API_URL}/delete/${id}`)
         .then(() => {
           setUsers(users.filter((user) => user.id !== id));
         })
